@@ -1,0 +1,36 @@
+﻿@page
+@model BookFakeApiWebUI.Pages.Books.IndexModel
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<h2>Books List</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+    <table class="table"">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>PageCount</th>
+                <th>Excerpt</th>
+                <th>PublishDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books) 
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Description</td>
+                    <td>@book.PageCount</td>
+                    <td>@book.Excerpt</td>
+                    <td>@book.PublishDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>

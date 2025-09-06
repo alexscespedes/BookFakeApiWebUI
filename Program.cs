@@ -1,6 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddHttpClient("BookAspNetWebApi" , httpClient =>
+{
+    httpClient.BaseAddress = new Uri("http://localhost:5185/api/");
+});
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
