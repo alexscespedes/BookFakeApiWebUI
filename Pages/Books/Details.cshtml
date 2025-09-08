@@ -1,0 +1,29 @@
+﻿@page
+@model BookFakeApiWebUI.Pages.Books.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Book.Title)</dt>
+        <dd class="col-sm-10">@Model.Book?.Title</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Book.Description)</dt>
+        <dd class="col-sm-10">@Model.Book?.Description</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Book.PageCount)</dt>
+        <dd class="col-sm-10">@Model.Book?.PageCount</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Book.Excerpt)</dt>
+        <dd class="col-sm-10">@Model.Book?.Excerpt</dd>
+
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Book.PublishDate)</dt>
+        <dd class="col-sm-10">@Model.Book?.PublishDate.ToString("yyyy-MM-dd")</dd>
+    </dl>
+
+</div>
