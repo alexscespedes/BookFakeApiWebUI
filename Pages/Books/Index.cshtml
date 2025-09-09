@@ -6,12 +6,8 @@
 
 <h2>Books List</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 
-
-    <table class="table"">
+    <table class="table">
         <thead>
             <tr>
                 <th>Title</th>
@@ -30,6 +26,11 @@
                     <td>@book.PageCount</td>
                     <td>@book.Excerpt</td>
                     <td>@book.PublishDate.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@book.Id">Details</a>
+                        <a asp-page="./Edit" asp-route-id="@book.Id">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@book.Id">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
