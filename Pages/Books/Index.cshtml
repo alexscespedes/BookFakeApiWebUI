@@ -1,11 +1,14 @@
 ﻿@page
 @model BookFakeApiWebUI.Pages.Books.IndexModel
 @{
-    ViewData["Title"] = "Book List";
+    ViewData["Title"] = "Index";
 }
 
 <h2>Books List</h2>
 
+<p>
+    <a asp-page="./Create">Create New</a>
+</p>
 
     <table class="table">
         <thead>
