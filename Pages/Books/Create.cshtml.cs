@@ -10,6 +10,7 @@ namespace BookFakeApiWebUI.Pages.Books
 {
     public class CreateModel : PageModel
     {
+        [BindProperty]
         public Book? Book { get; set; } = new();
         private readonly IHttpClientFactory _httpClientFactory;
 
